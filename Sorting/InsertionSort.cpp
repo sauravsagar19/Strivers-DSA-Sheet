@@ -4,7 +4,17 @@ using namespace std;
 // The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and 
 // placed at the correct position in the sorted part
 void Insertion(int arr[], int n){
-    
+    for(int i=0; i<n;i++){
+        int j=i;
+        while(j>0 && arr[j-1]>arr[j]){
+            // swap(arr[j],arr[j-1]);
+            int temp=arr[j];
+            arr[j]=arr[j-1];
+            arr[j-1]=temp;
+            j--;
+        }
+
+    }
 }
 int main(){
 int arr[]={6,8,3,2,7,1,5,4,9};
